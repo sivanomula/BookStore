@@ -1,0 +1,67 @@
+﻿<div class="row">
+    <div class="col-md-6 hidden-xs hidden-sm">
+        <h2>Register for OceanFrogs</h2><hr class="small" />
+        <h4>The biggest repository to resolve your pain point</h4>
+        <div>
+            <p>
+                Ocean Frogs is the biggest repository for pain points.
+                Explore the Ocean of opportunities with OceanFrogs, in the field of pre-sales, pain point, lead generation,
+                market analysis, etc.
+            </p>
+            <p>
+                Explore various news and events, seminars, webinars, press-releases, softwares, etc.
+                just at one stop with just a few clicks.
+            </p>
+        </div>
+    </div>
+    <div class="col-md-6">
+        <div class="row">
+            <div class="col-sm-6">
+                <form-group label="First Name" error-messages="{'minlength': 'min length of 3'}">
+                    <input type="text" ng-model="newUser.FirstName" required="" form-control="" ng-minlength="3" />
+                </form-group>
+            </div>
+            <div class="col-sm-6">
+                <form-group label="Last Name">
+                    <input type="text" ng-model="newUser.LastName" required="" form-control="" />
+                </form-group>
+            </div>
+        </div>
+        <div class="row">
+            <form-group label="Choose Password" class="col-sm-6">
+                <input type="password" ng-model="newUser.Password" form-control="" />
+            </form-group>
+            <form-group label="Confirm Password" class="col-sm-6">
+                <input type="password" ng-model="newUser.confirmPassword" form-control="" />
+            </form-group>
+        </div>
+        <div class="row">
+            <div class="col-sm-4">
+                <form-group label="Birth Date">
+                    <input type="date" ng-model="newUser.BirthDate" form-control="" />
+                </form-group>
+            </div>
+            <div class="col-sm-5">
+                <form-group label="Email">
+                    <input type="email" ng-model="newUser.Email" required="" form-control="" />
+                </form-group>
+            </div>
+            <div class="col-sm-3">
+                <form-group label="Gender">
+                    <select ng-model="newUser.Gender" form-control="" required="">
+                        <option value="M">Male</option>
+                        <option value="F">Female</option>
+                        <option value="O">Other</option>
+                    </select>
+                </form-group>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-offset-2 col-md-10">
+                <button type="submit" class="btn btn-primary" ng-click="registerUser();">Register</button>
+                <button type="button" class="btn btn-default">Cancel</button>
+            </div>
+        </div>
+        <pre>{{ newUser | json}}</pre>
+    </div>
+</div>

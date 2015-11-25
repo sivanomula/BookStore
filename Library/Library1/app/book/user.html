@@ -1,0 +1,48 @@
+﻿<!DOCTYPE html>
+<html ng-app="app">
+<head>
+    <meta charset="utf-8" />
+    <title>Library</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet" />
+    <link href="css/style.css" rel="stylesheet" />
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.7/angular.min.js"></script>
+    <script src="app/userCtrl.js"></script>
+</head>
+<body>
+    <div class="main" ng-controller="indexCtrl">
+        <form name="myForm" novalidate>
+            <div>
+                Name:  <input type="text" name="name" value="" ng-model="employee.name" required="required" ng-disabled="editIndex != -1" />
+                <span ng-show="myForm.name.$error.required">name is required.</span>
+
+                Gender:    <select ng-model="employee.gender" required="required">
+                    <option value="M">Male</option>
+                    <option value="F"> Female</option>
+                </select>
+                Salary:  <input type="number" name="salary" value="" ng-model="employee.salary" required="required" />
+                <div>myForm.name.$pristine  {{ myForm.name.$pristine && true }}</div>
+                <div>myForm.name.$dirty      {{myForm.name.$dirty}}</div>
+                <div>myForm.name.$invalid{{myForm.name.$invalid}}</div>
+                <div>myForm.name.$valid{{myForm.name.$valid}}</div>
+                <div>myForm.name.$error.required{{myForm.name.$error.required}}</div>
+                <input type="submit" name="save" value="Save" ng-click="save();"
+                       ng-disabled=" myForm.name.$invalid " />
+            </div>
+        </form>
+        <div ng-show="employees.length>0">
+            <table class="table table-striped">
+                <tr><th>{{'name'|uppercase}}</th><th>{{'gender'|uppercase}}</th><th>{{'salary'|uppercase}}</th><th>{{'edit'|uppercase}}</th></tr>
+                <tbody ng-repeat="e in employees">
+                    <tr>
+                        <td>{{e.name}}</td>
+                        <td>{{e.gender=='M'?'Male':'Female'}}</td>
+                        <td>{{e.salary|currency}}</td>
+                        <td><input type="button" value="select" ng-click="edit($index);" /></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+</body>
+</html>
