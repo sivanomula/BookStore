@@ -10,7 +10,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 		global.json = global.json
 	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Library1", "Library1\Library1.csproj", "{BBE2D180-CC26-4DE6-8962-2110942A4921}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Library.UI", "Library.UI\Library.UI.csproj", "{BBE2D180-CC26-4DE6-8962-2110942A4921}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Library.Service", "Library.Service\Library.Service.csproj", "{1B9B6723-BA7D-477E-9C2D-637D6F9EC721}"
 EndProject
@@ -35,19 +35,5 @@ Global
 	GlobalSection(NestedProjects) = preSolution
 		{BBE2D180-CC26-4DE6-8962-2110942A4921} = {0435AE22-54C2-43E5-9B8D-FCC9ED578521}
 		{1B9B6723-BA7D-477E-9C2D-637D6F9EC721} = {0435AE22-54C2-43E5-9B8D-FCC9ED578521}
-	EndGlobalSection
-	GlobalSection(TeamFoundationVersionControl) = preSolution
-		SccNumberOfProjects = 3
-		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
-		SccTeamFoundationServer = https://sivanomula.visualstudio.com/defaultcollection
-		SccLocalPath0 = .
-		SccProjectUniqueName1 = Library1\\Library1.csproj
-		SccProjectTopLevelParentUniqueName1 = Library.sln
-		SccProjectName1 = Library1
-		SccLocalPath1 = Library1
-		SccProjectUniqueName2 = Library.Service\\Library.Service.csproj
-		SccProjectTopLevelParentUniqueName2 = Library.sln
-		SccProjectName2 = Library.Service
-		SccLocalPath2 = Library.Service
 	EndGlobalSection
 EndGlobal
